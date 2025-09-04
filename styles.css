@@ -393,6 +393,15 @@ h2 {
         padding: 2px;
         text-align: center;
     }
+    .action-plan {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .action-card {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 400px) {
@@ -400,4 +409,7 @@ h2 {
     .priority-indicator { font-size: 0.85em; }
     .action-card { padding: 18px; }
     .formula { font-size: 1.3em; line-height: 1.15; letter-spacing: 0.5px; }
+    .action-card {
+        max-width: 360px;
+    }
 } 
