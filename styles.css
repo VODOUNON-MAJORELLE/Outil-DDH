@@ -64,6 +64,7 @@ h2 {
     margin: 40px 0;
     display: flex;
     justify-content: center;
+    padding-top: 38px;
 }
 
 .risk-matrix {
@@ -141,7 +142,8 @@ h2 {
 }
 
 .x-axis-label {
-    bottom: -50px;
+    top: -36px;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -163,11 +165,12 @@ h2 {
 }
 
 .x-arrow {
-    bottom: -30px;
+    top: -16px;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-    border-width: 15px 10px 0 10px;
-    border-color: #2c3e50 transparent transparent transparent;
+    border-width: 0 10px 15px 10px;
+    border-color: transparent transparent #2c3e50 transparent;
 }
 
 .formula-container {
@@ -367,6 +370,29 @@ h2 {
     .timeline::before { left: 20px; }
     .timeline-item { width: calc(100% - 40px); margin-left: 40px !important; padding: 15px; }
     .formula { font-size: 1.5em; line-height: 1.2; letter-spacing: 1px; }
+    /* Place Impact label above the matrix on mobile */
+    .x-axis-label {
+        top: -40px;
+        bottom: auto;
+    }
+    .x-arrow {
+        top: -20px;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 0 10px 15px 10px;
+        border-color: transparent transparent #2c3e50 transparent;
+    }
+
+    /* Matrix headers readability */
+    .risk-matrix .matrix-header {
+        font-size: 0.75em;
+        line-height: 1.1;
+        word-break: break-word;
+        white-space: normal;
+        padding: 2px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 400px) {
